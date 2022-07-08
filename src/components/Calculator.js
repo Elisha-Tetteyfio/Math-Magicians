@@ -1,52 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Calculator.css';
 import calculate from '../logic/calculate';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    const result = document.querySelector('.displayScreen');
-    this.state = { total: result, next: 0, operation: '' };
-  }
+const Calculatorr = () => {
+  const result = document.querySelector('.displayScreen');
 
-  buttonClicked = (e) => {
-    const { ...state } = this.state;
-    this.setState(calculate(state, e.target.innerHTML));
+  const [state, setState] = useState({ total: result, next: 0, operation: '' });
+
+  const buttonClicked = (e) => {
+    setState(calculate(state, e.target.innerHTML));
   };
 
-  render() {
-    const { total, next, operation } = this.state;
-    return (
-      <div id="main">
-        <div id="displayScreen">
-          {total}
-          {operation}
-          {next}
-        </div>
-        <div id="buttonsContainer">
-          <button type="button" className="buttons" onClick={this.buttonClicked}>AC</button>
-          <button type="button" className="buttons" onClick={this.buttonClicked}>+/-</button>
-          <button type="button" className="buttons" onClick={this.buttonClicked}>%</button>
-          <button type="button" className="buttons bg-orange" onClick={this.buttonClicked}>&#247;</button>
-          <button type="button" className="buttons" onClick={this.buttonClicked}>7</button>
-          <button type="button" className="buttons" onClick={this.buttonClicked}>8</button>
-          <button type="button" className="buttons" onClick={this.buttonClicked}>9</button>
-          <button type="button" className="buttons bg-orange" onClick={this.buttonClicked}>x</button>
-          <button type="button" className="buttons" onClick={this.buttonClicked}>4</button>
-          <button type="button" className="buttons" onClick={this.buttonClicked}>5</button>
-          <button type="button" className="buttons" onClick={this.buttonClicked}>6</button>
-          <button type="button" className="buttons bg-orange" onClick={this.buttonClicked}>-</button>
-          <button type="button" className="buttons" onClick={this.buttonClicked}>1</button>
-          <button type="button" className="buttons" onClick={this.buttonClicked}>2</button>
-          <button type="button" className="buttons" onClick={this.buttonClicked}>3</button>
-          <button type="button" className="buttons bg-orange" onClick={this.buttonClicked}>+</button>
-          <button type="button" className="buttons" id="zero" onClick={this.buttonClicked}>0</button>
-          <button type="button" className="buttons" onClick={this.buttonClicked}>.</button>
-          <button type="button" className="buttons bg-orange" onClick={this.buttonClicked}>=</button>
-        </div>
+  return (
+    <div id="main">
+      <div id="displayScreen">
+        {state.total}
+        {state.operation}
+        {state.next}
       </div>
-    );
-  }
-}
+      <div id="buttonsContainer">
+        <button type="button" className="buttons" onClick={buttonClicked}>AC</button>
+        <button type="button" className="buttons" onClick={buttonClicked}>+/-</button>
+        <button type="button" className="buttons" onClick={buttonClicked}>%</button>
+        <button type="button" className="buttons bg-orange" onClick={buttonClicked}>&#247;</button>
+        <button type="button" className="buttons" onClick={buttonClicked}>7</button>
+        <button type="button" className="buttons" onClick={buttonClicked}>8</button>
+        <button type="button" className="buttons" onClick={buttonClicked}>9</button>
+        <button type="button" className="buttons bg-orange" onClick={buttonClicked}>x</button>
+        <button type="button" className="buttons" onClick={buttonClicked}>4</button>
+        <button type="button" className="buttons" onClick={buttonClicked}>5</button>
+        <button type="button" className="buttons" onClick={buttonClicked}>6</button>
+        <button type="button" className="buttons bg-orange" onClick={buttonClicked}>-</button>
+        <button type="button" className="buttons" onClick={buttonClicked}>1</button>
+        <button type="button" className="buttons" onClick={buttonClicked}>2</button>
+        <button type="button" className="buttons" onClick={buttonClicked}>3</button>
+        <button type="button" className="buttons bg-orange" onClick={buttonClicked}>+</button>
+        <button type="button" className="buttons" id="zero" onClick={buttonClicked}>0</button>
+        <button type="button" className="buttons" onClick={buttonClicked}>.</button>
+        <button type="button" className="buttons bg-orange" onClick={buttonClicked}>=</button>
+      </div>
+    </div>
+  );
+};
 
-export default Calculator;
+export default Calculatorr;
