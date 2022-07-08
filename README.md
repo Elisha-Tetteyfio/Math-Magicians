@@ -8,9 +8,9 @@
 
 - React
 
-## Live Demo (if available)
+## Live Demo 
 
-[Live Demo Link](https://livedemo.com)
+[Not available yet](https://livedemo.com)
 
 
 ## Getting Started
