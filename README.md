@@ -8,9 +8,10 @@
 
 - React
 
-## Live Demo 
+## Deployment
 
-[Not available yet](https://livedemo.com)
+[Netlify](https://radiant-sunburst-89a1e6.netlify.app)
+[Heroku](https://tetteyfio-maths-magicians.herokuapp.com/)
 
 
 ## Getting Started
