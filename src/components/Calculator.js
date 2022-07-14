@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Calculator.css';
 import calculate from '../logic/calculate';
 
-const Calculatorr = () => {
+const Calculator = () => {
   const result = document.querySelector('.displayScreen');
 
   const [state, setState] = useState({ total: result, next: 0, operation: '' });
@@ -43,4 +43,4 @@ const Calculatorr = () => {
   );
 };
 
-export default Calculatorr;
+export default Calculator;

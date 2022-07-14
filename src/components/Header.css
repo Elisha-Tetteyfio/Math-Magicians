@@ -1,0 +1,30 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 50px;
+  background-color: orange;
+  border-radius: 75%;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  padding: 0 50px;
+}
+
+.linkItem {
+  padding: 5px 20px;
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.orange {
+  color: orange;
+  text-decoration: underline;
+}
